@@ -15,12 +15,12 @@ import { CompanyProfile, TrendItem } from "./types";
 import { api } from "./services/api";
 
 export const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>("dashboard");
+  const [activeTab, setActiveTab] = useState<string>("title_ranker");
   const [company, setCompany] = useState<CompanyProfile>({
     name: "AmpEdge Solutions",
-    industry: "Tech, Software & Digital Solutions",
-    targetAudience: "Entrepreneurs, Businesses, Tech Enthusiasts & Growth Seekers",
-    brandVoice: "Authoritative, High-Energy, Insightful & Direct",
+    industry: "Electrical Services, House Wiring, Society AMC & Material Supply",
+    targetAudience: "Homeowners, Housing Societies, Apartment Secretaries & Factory Managers",
+    brandVoice: "Authoritative, Trustworthy, Safety-Focused & Direct",
     apiKey: ""
   });
 
@@ -75,7 +75,7 @@ export const App: React.FC = () => {
           {activeTab === "content_studio" && (
             <ContentStudioView
               company={company}
-              initialTopic={selectedTrendTopic}
+              initialTopic={selectedTrendTopic || "House Wiring Mistakes & Electrical AMC Guide"}
             />
           )}
 

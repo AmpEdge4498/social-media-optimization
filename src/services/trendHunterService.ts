@@ -2,85 +2,66 @@ import { TrendItem } from "../types";
 
 export const trendingCategories = [
   {
-    id: "tech_ai",
-    name: "Tech & AI Automation",
+    id: "electrical_residential",
+    name: "House Wiring & Safety (हिंदी / বাংলা / EN)",
     trends: [
       {
         id: "trend-1",
-        title: "How AmpEdge AI Agents are replacing 5-person marketing teams",
-        category: "Tech & AI",
-        growthVelocity: "+380%",
-        viralityPotential: 96,
-        sentiment: "Curiosity & Urgency",
-        targetPlatforms: ["instagram", "youtube", "twitter", "facebook"] as any,
+        title: "3 House Wiring Mistakes That Cause 90% of Electrical Fires & Short Circuits",
+        category: "Electrical Safety",
+        growthVelocity: "+440%",
+        viralityPotential: 98,
+        sentiment: "Safety Hazard & Loss Prevention",
+        targetPlatforms: ["instagram", "youtube", "facebook"] as any,
         recommendedFormat: "video" as any,
-        hookIdea: "Stop hiring agencies. Here is how 1 AI system runs our entire digital pipeline...",
-        subconsciousTrigger: "FOMO + Massive Cost Reduction Desire",
-        hashtags: ["#AmpEdge", "#AIAgents", "#MarketingAutomation", "#TechTrends2026", "#GrowthHacking"]
+        hookIdea: "घर की वायरिंग करवाते समय ये 3 गलतियां कभी मत करना! (Check your MCB & Earthing)",
+        subconsciousTrigger: "Fear of Hazard + Home Protection Instinct",
+        hashtags: ["#HouseWiring", "#AmpEdgeSolutions", "#ElectricalSafety", "#ShortCircuit", "#ElectricianTips"]
       },
       {
         id: "trend-2",
-        title: "The 3 Secret Systems That Got AmpEdge Clients 1M Impressions in 7 Days",
-        category: "Tech & AI",
-        growthVelocity: "+290%",
-        viralityPotential: 94,
-        sentiment: "High Value / Save Trigger",
-        targetPlatforms: ["twitter", "instagram", "youtube"] as any,
-        recommendedFormat: "photo" as any,
-        hookIdea: "Save this before it gets saturated. 3 software frameworks top brands gatekeep...",
-        subconsciousTrigger: "Greed & Exclusivity (Knowledge Arbitrage)",
-        hashtags: ["#AmpEdgeSolutions", "#TechStrategy", "#ViralGrowth", "#SoftwareSystems"]
+        title: "How to Choose Original ISI Electrical Cables vs Cheap Copper Wire (Save ₹50,000)",
+        category: "Material Supply",
+        growthVelocity: "+320%",
+        viralityPotential: 95,
+        sentiment: "Money Savings & Quality Awareness",
+        targetPlatforms: ["youtube", "instagram", "facebook"] as any,
+        recommendedFormat: "video" as any,
+        hookIdea: "দোকানদার আপনাকে সস্তা তার দিচ্ছে না তো? আসল বনাম নকল তার চেনার উপায়...",
+        subconsciousTrigger: "Greed + Fraud Aversion (Material Purity)",
+        hashtags: ["#ElectricalMaterials", "#AmpEdge", "#CopperWire", "#KolkataElectrician", "#WiringGuide"]
       }
     ]
   },
   {
-    id: "business_agency",
-    name: "Business, Agency & Services",
+    id: "electrical_amc",
+    name: "Apartment Society AMC & Industrial Panels",
     trends: [
       {
         id: "trend-3",
-        title: "Why 90% of Outdated Software Will Kill Companies This Year",
-        category: "Business",
-        growthVelocity: "+410%",
-        viralityPotential: 97,
-        sentiment: "Controversy & Survival",
-        targetPlatforms: ["youtube", "facebook", "twitter", "instagram"] as any,
+        title: "Why High-Rise Apartments & Housing Societies Need an Annual Electrical AMC in 2026",
+        category: "Society AMC",
+        growthVelocity: "+390%",
+        viralityPotential: 96,
+        sentiment: "B2B Peace of Mind & Compliance",
+        targetPlatforms: ["facebook", "youtube", "google_business"] as any,
         recommendedFormat: "video" as any,
-        hookIdea: "Most software vendors are lying to you. Here is the brutal truth about scalable tech...",
-        subconsciousTrigger: "Cognitive Dissonance & Reality Check",
-        hashtags: ["#AmpEdgeTech", "#BusinessStrategy", "#Entrepreneurship", "#ViralTruth"]
+        hookIdea: "If your housing society doesn't have an electrical AMC, here is why maintenance bills double...",
+        subconsciousTrigger: "Financial Responsibility & Resident Safety",
+        hashtags: ["#ApartmentAMC", "#SocietyMaintenance", "#AmpEdgeSolutions", "#ElectricalAMC", "#KolkataRealEstate"]
       },
       {
         id: "trend-4",
-        title: "Google Business Profile Secret: Rank #1 in Local 3-Pack in 14 Days",
-        category: "Local Business",
-        growthVelocity: "+220%",
-        viralityPotential: 91,
-        sentiment: "Actionable High ROI",
-        targetPlatforms: ["google_business", "youtube", "facebook"] as any,
+        title: "Industrial Substation & LT/HT Panel Maintenance Checklist (Zero Factory Downtime)",
+        category: "Industrial Power",
+        growthVelocity: "+270%",
+        viralityPotential: 94,
+        sentiment: "B2B Reliability & Zero Downtime",
+        targetPlatforms: ["youtube", "twitter", "google_business"] as any,
         recommendedFormat: "photo" as any,
-        hookIdea: "If you own a local business, you are losing 70% of phone calls because of this 1 GBP setting...",
-        subconsciousTrigger: "Fear of Loss (Pain Point Amplification)",
-        hashtags: ["#GoogleBusinessProfile", "#LocalSEO", "#SmallBizTips", "#AmpEdgeSolutions"]
-      }
-    ]
-  },
-  {
-    id: "ecommerce_d2c",
-    name: "E-Commerce & D2C Brands",
-    trends: [
-      {
-        id: "trend-5",
-        title: "The Frictionless Checkout System That Doubles Conversion Without Ads",
-        category: "E-Commerce",
-        growthVelocity: "+310%",
-        viralityPotential: 93,
-        sentiment: "Aesthetic & Dopamine",
-        targetPlatforms: ["instagram", "youtube", "facebook"] as any,
-        recommendedFormat: "video" as any,
-        hookIdea: "We changed just ONE workflow in the digital stack and conversion skyrocketed...",
-        subconsciousTrigger: "Curiosity Loop & Instant Replicability",
-        hashtags: ["#AmpEdge", "#D2CGrowth", "#TechBuilding", "#SoftwareEngineering"]
+        hookIdea: "Factory owners: How to prevent sudden electrical breakdowns during peak production...",
+        subconsciousTrigger: "Business Risk Elimination",
+        hashtags: ["#IndustrialElectrical", "#SubstationMaintenance", "#AmpEdge", "#PanelTesting", "#ElectricalEngineering"]
       }
     ]
   }
