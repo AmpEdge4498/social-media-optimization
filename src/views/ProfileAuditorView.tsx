@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { 
   UserCheck, 
   Plus, 
@@ -21,13 +21,13 @@ interface ProfileAuditorProps {
 }
 
 export const ProfileAuditorView: React.FC<ProfileAuditorProps> = ({ company }) => {
-  // Preset URLs or user input URLs
+  // User provided URLs for AmpEdge Solutions
   const [urls, setUrls] = useState<{ [key: string]: string }>({
-    youtube: "https://youtube.com/@ampedge-company",
-    instagram: "https://instagram.com/ampedge_official",
-    facebook: "https://facebook.com/ampedge.company",
-    twitter: "https://x.com/ampedge_tech",
-    google_business: "https://maps.app.goo.gl/ampedge-hq"
+    youtube: "https://www.youtube.com/channel/UCl_t66zGTsJYdc9l-c-wzDg",
+    instagram: "https://www.instagram.com/ampedge.info/",
+    facebook: "https://www.facebook.com/profile.php?id=61587989206784",
+    twitter: "https://x.com/edge_amp",
+    google_business: "https://www.google.com/search?q=AmpEdge+Soluations"
   });
 
   const [activePlatformInput, setActivePlatformInput] = useState<string>("youtube");
@@ -42,6 +42,10 @@ export const ProfileAuditorView: React.FC<ProfileAuditorProps> = ({ company }) =
     { key: "twitter", name: "Twitter / X Profile", icon: Twitter, placeholder: "https://x.com/yourhandle" },
     { key: "google_business", name: "Google Business Profile", icon: MapPin, placeholder: "https://maps.google.com/?cid=..." }
   ];
+
+  useEffect(() => {
+    handleAuditAll();
+  }, []);
 
   const handleAuditSingle = async (platformKey: string, urlToAudit: string) => {
     if (!urlToAudit) return;

@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar } from "./components/Navbar";
 import { Sidebar } from "./components/Sidebar";
 import { DashboardView } from "./views/DashboardView";
@@ -14,9 +14,9 @@ import { api } from "./services/api";
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("dashboard");
   const [company, setCompany] = useState<CompanyProfile>({
-    name: "AmpEdge AI",
-    industry: "Tech, AI & Automation",
-    targetAudience: "Business Owners, Creators & Growth Marketers",
+    name: "AmpEdge Solutions",
+    industry: "Tech, Software & Digital Solutions",
+    targetAudience: "Entrepreneurs, Businesses, Tech Enthusiasts & Growth Seekers",
     brandVoice: "Authoritative, High-Energy, Insightful & Direct",
     apiKey: ""
   });
