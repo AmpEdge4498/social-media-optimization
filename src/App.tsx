@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Navbar } from "./components/Navbar";
 import { Sidebar } from "./components/Sidebar";
 import { DashboardView } from "./views/DashboardView";
+import { TitleRankerView } from "./views/TitleRankerView";
+import { PostAnalyticsView } from "./views/PostAnalyticsView";
+import { SocialEditorView } from "./views/SocialEditorView";
 import { ContentStudioView } from "./views/ContentStudioView";
 import { SubconsciousLabView } from "./views/SubconsciousLabView";
 import { ProfileAuditorView } from "./views/ProfileAuditorView";
@@ -55,6 +58,18 @@ export const App: React.FC = () => {
               trends={trends}
               onSelectTrend={handleSelectTrend}
             />
+          )}
+
+          {activeTab === "title_ranker" && (
+            <TitleRankerView company={company} />
+          )}
+
+          {activeTab === "post_analytics" && (
+            <PostAnalyticsView company={company} />
+          )}
+
+          {activeTab === "social_editor" && (
+            <SocialEditorView company={company} />
           )}
 
           {activeTab === "content_studio" && (
