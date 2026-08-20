@@ -1,56 +1,6 @@
 export type PlatformType = "youtube" | "instagram" | "facebook" | "twitter" | "google_business";
 export type ContentFormat = "video" | "photo";
 
-export type ProjectCategory = 
-  | "residential_apartment" 
-  | "independent_house" 
-  | "commercial_office" 
-  | "industrial_plant" 
-  | "housing_society_amc";
-
-export type ConstructionStage = 
-  | "Civil & Slab Completed (Concealed Wiring Phase)"
-  | "Finishing & Modular Phase (Switches & Inverters)"
-  | "Substation / Transformer & Earthing Phase"
-  | "Pre-Handover & Final Testing"
-  | "Existing Complex (AMC & Maintenance Renewal)";
-
-export type LeadStatus = 
-  | "New Lead" 
-  | "Contacted" 
-  | "Site Visit Booked" 
-  | "Quotation Sent" 
-  | "Contract Won / AMC Active";
-
-export interface ConstructionLead {
-  id: string;
-  projectName: string;
-  category: ProjectCategory;
-  location: {
-    area: string;
-    city: string;
-    state: string;
-    pincode: string;
-    fullAddress: string;
-    googleMapsUrl: string;
-  };
-  contactPerson: {
-    name: string;
-    role: "Project Developer" | "Site Engineer" | "Society Secretary" | "Builder / Promoter" | "Plant Manager";
-    phone: string;
-    whatsapp: string;
-    email: string;
-    companyOrBuilderName: string;
-  };
-  constructionStage: ConstructionStage;
-  electricalScope: string[];
-  estimatedDealValue: string;
-  discoverySource: "Google Maps" | "Google Search Console" | "Facebook Real Estate" | "Local Construction Registry" | "CRM Feed" | "Google Business Profile" | string;
-  crmStatus: LeadStatus;
-  notes?: string;
-  discoveredDate: string;
-}
-
 export interface ThreeDateComparisonMetric {
   metricName: string;
   date1Value: number | string;

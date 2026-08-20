@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navbar } from "./components/Navbar";
 import { Sidebar } from "./components/Sidebar";
-import { ConstructionLeadView } from "./views/ConstructionLeadView";
 import { DashboardView } from "./views/DashboardView";
 import { TitleRankerView } from "./views/TitleRankerView";
 import { PostAnalyticsView } from "./views/PostAnalyticsView";
@@ -16,11 +15,11 @@ import { CompanyProfile, TrendItem } from "./types";
 import { api } from "./services/api";
 
 export const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>("construction_leads");
+  const [activeTab, setActiveTab] = useState<string>("title_ranker");
   const [company, setCompany] = useState<CompanyProfile>({
     name: "AmpEdge Solutions",
-    industry: "Electrical Contracting, House Wiring, Society AMC & Material Supply",
-    targetAudience: "Builders, Real Estate Promoters, Housing Society Secretaries & Plant Managers",
+    industry: "Electrical Services, House Wiring, Society AMC & Material Supply",
+    targetAudience: "Homeowners, Housing Societies, Apartment Secretaries & Factory Managers",
     brandVoice: "Authoritative, Trustworthy, Safety-Focused & Direct",
     apiKey: ""
   });
@@ -52,10 +51,6 @@ export const App: React.FC = () => {
         <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
 
         <main className="flex-1 overflow-y-auto min-h-[calc(100vh-4rem)] pb-12 bg-[#080c14]">
-          {activeTab === "construction_leads" && (
-            <ConstructionLeadView company={company} />
-          )}
-
           {activeTab === "title_ranker" && (
             <TitleRankerView company={company} />
           )}

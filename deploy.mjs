@@ -25,7 +25,7 @@ execSync("npx tsc && npx vite build", { stdio: "inherit" });
 
 console.log("3. Reading generated dist/index.html...");
 let distHtml = fs.readFileSync("dist/index.html", "utf8");
-const skeleton = `<div id="root"><div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#080c14;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;text-align:center;padding:20px;"><div style="width:50px;height:50px;border:3px solid #1e293b;border-top-color:#10b981;border-radius:50%;animation:spin 1s linear infinite;margin-bottom:20px;"></div><h2 style="font-size:20px;font-weight:700;margin:0 0 8px 0;color:#fff;">ViralMind AI — AmpEdge Solutions</h2><p style="font-size:13px;color:#94a3b8;margin:0;">Loading Construction Lead Engine & 3-Date Profile Optimizer...</p><style>@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}</style></div></div>`;
+const skeleton = `<div id="root"><div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#080c14;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;text-align:center;padding:20px;"><div style="width:50px;height:50px;border:3px solid #1e293b;border-top-color:#6366f1;border-radius:50%;animation:spin 1s linear infinite;margin-bottom:20px;"></div><h2 style="font-size:20px;font-weight:700;margin:0 0 8px 0;color:#fff;">ViralMind AI — AmpEdge Solutions</h2><p style="font-size:13px;color:#94a3b8;margin:0;">Loading Social Media Optimization & Title SEO Engine...</p><style>@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}</style></div></div>`;
 distHtml = distHtml.replace('<div id="root"></div>', skeleton);
 
 fs.writeFileSync("dist/index.html", distHtml, "utf8");
@@ -52,13 +52,13 @@ fs.writeFileSync(".nojekyll", "", "utf8");
 
 console.log("5. Pushing to GitHub (main & gh-pages)...");
 try {
-  execSync("git add -A && git commit -m \"feat: complete Construction Lead Hunter & 3-Date Profile Optimizer\" && git push origin main", { stdio: "inherit" });
+  execSync("git add -A && git commit -m \"refactor: focus 100% on Social Media Optimization, Title Ranker & 3-Date Video SEO\" && git push origin main", { stdio: "inherit" });
 } catch (e) {
   console.log("Git main push notice:", e.message);
 }
 
 try {
-  execSync("cd dist && git add -A && git commit -m \"deploy: Construction Lead Hunter & 3-Date Profile Optimizer\" && git push -f origin gh-pages && cd ..", { stdio: "inherit" });
+  execSync("cd dist && git add -A && git commit -m \"deploy: pure Social Media Optimization & Title SEO Engine\" && git push -f origin gh-pages && cd ..", { stdio: "inherit" });
 } catch (e) {
   console.log("Git gh-pages push notice:", e.message);
 }
